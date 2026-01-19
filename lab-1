@@ -1,0 +1,21 @@
+def get_valid_year():
+    while True:
+        try:
+            year = int(input("Введите свой год рождения: "))
+            return year
+        except ValueError:
+            print("Пожалуйста, введите число.")
+
+
+
+def main():
+    surname = input("Введите вашу фамилию: ")
+    name = input("Введите ваше имя: ")
+    birth_year = get_valid_year()
+    current_year = 2025
+    age = current_year - birth_year
+    print(f"\nЗдравствуйте, {name} {surname}!")
+    print(f"Ваш возраст составляет: {age} лет.")
+
+if __name__ == "__main__":
+    main()
